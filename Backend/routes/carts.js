@@ -1,8 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const Cart = require('../models/Cart'); // Ensure Cart model exists in models/
+const Cart = require('../models/Cart'); 
 
-// Define your routes here
 router.get('/', async (req, res) => {
     try {
         const carts = await Cart.find();

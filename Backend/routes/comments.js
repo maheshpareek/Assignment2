@@ -2,8 +2,6 @@ const express = require('express');
 const router = express.Router();
 const Comment = require('../models/Comment');
 
-// @route   POST /api/comments
-// @desc    Add a new comment
 router.post('/', async (req, res) => {
     try {
         const { product, user, rating, images, text } = req.body;
@@ -23,8 +21,7 @@ router.post('/', async (req, res) => {
     }
 });
 
-// @route   GET /api/comments
-// @desc    Get all comments
+
 router.get('/', async (req, res) => {
     try {
         const comments = await Comment.find();

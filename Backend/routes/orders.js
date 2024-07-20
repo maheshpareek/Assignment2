@@ -1,8 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const Order = require('../models/Order'); // Ensure Order model exists in models/
+const Order = require('../models/Order'); 
 
-// Define your routes here
 router.get('/', async (req, res) => {
     try {
         const orders = await Order.find();
